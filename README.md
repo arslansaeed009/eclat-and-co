@@ -26,12 +26,12 @@
 
 ```
 eclat-and-co/
-├─ index.html        # Main HTML file (entry)
-├─ style.css         # Styles for the website
-├─ script.js         # JavaScript (interactions/animations)
-├─ /images           # All images used by the site
-├─ /screenshots      # (optional) screenshots for README presentation
-└─ README.md         # This file
+├─ index.html        
+├─ style.css         
+├─ script.js         
+├─ /images           
+├─ /screenshots      
+└─ README.md         
 ```
 
 ---
