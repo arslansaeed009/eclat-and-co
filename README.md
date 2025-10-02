@@ -136,59 +136,12 @@ If you (or others) want to improve the site later, follow a simple workflow:
 
 **Arslan Saeed** — Frontend Developer
 
-* Portfolio: *add-your-portfolio-link*
-* LinkedIn: *add-your-linkedin-link*
-* GitHub: [https://github.com/yourusername](https://github.com/yourusername)
+* Portfolio: *https://arsalans-portfolioo.netlify.app/*
+* LinkedIn: *www.linkedin.com/in/arslan-saeed-44405329a*
+* GitHub: (https://github.com/arslansaeed009)
 
----
 
-## ✅ Deployment checklist (exact copyable commands)
-
-> Replace `yourusername` with your GitHub username and run these commands in your project root (or copy them to a terminal). If you already created the repository on GitHub, replace the remote URL with the one GitHub shows you.
-
-```bash
-# 1) Initialize local git (only if not already a git repo)
-git init
-
-# 2) Add all files
-git add .
-
-# 3) Commit
-git commit -m "Initial commit - Eclat & Co"
-
-# 4) Create main branch and add remote (replace URL)
-git branch -M main
-git remote add origin https://github.com/yourusername/eclat-and-co.git
-
-# 5) Push to GitHub
-git push -u origin main
 ```
 
----
 
-## 🛰️ Enable GitHub Pages (once pushed)
 
-1. Open your repository on GitHub.
-2. Go to **Settings** → **Pages** (or *Code and automation* → *Pages* depending on UI updates).
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)` and save.
-5. Wait 30–120 seconds, then visit `https://yourusername.github.io/eclat-and-co/`.
-
----
-
-## 🔍 Troubleshooting
-
-* If images don't show after deployment, check that your image paths in `index.html` are relative (e.g. `images/logo.png`) and the files are committed.
-* If the site doesn't load, check the GitHub Pages section for build errors or messages.
-
----
-
-## 📚 Want me to do more?
-
-If you want, I can:
-
-* Generate a ready-to-paste `README.md` that exactly matches this file (so you can copy it into your repo). ✅
-* Prepare optimized screenshot frames for better presentation in README.
-* Walk you through the terminal commands step-by-step while you run them (I will not run anything for you).
-
-Tell me which of the above you'd like next and I'll do it for you.
