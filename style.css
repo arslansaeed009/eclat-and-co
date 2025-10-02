@@ -45,13 +45,22 @@ body{
   height: 100vh;
   position: relative;
 }
+/* Hero section default (desktop) */
 .hero-slide {
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(.75);
 }
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .hero-slide {
+    background-size: contain;  /* cut nahi hogi */
+    background-color: #000;    /* image ke around black background */
+  }
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
