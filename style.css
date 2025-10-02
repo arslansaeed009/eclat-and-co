@@ -49,6 +49,7 @@ body{
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   filter: brightness(.75);
 }
 .hero-overlay {
@@ -57,7 +58,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10; /* overlay hamesha images ke upar dikhayega */
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +96,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 11; /* images ke upar */
+  z-index: 11;
 }
 .social-icons a {
   width: 42px;
@@ -113,35 +114,28 @@ body{
   background: #222;
 }
 
-
 .about-section {
   background: linear-gradient(135deg, #000, #1a1a1a);
   color: #ddd;
 }
-
 .about-section .section-heading {
   color: #f5f5f5;
 }
-
 .about-section .text-gold {
   color: #d4af37;
 }
-
 .about-section .about-text {
   color: #bbb;
   line-height: 1.8;
 }
-
 .about-section .about-images {
   position: relative;
   display: inline-block;
 }
-
 .about-section .about-img-1 {
   width: 80%;
   border-radius: 12px;
 }
-
 .about-section .about-img-2 {
   width: 50%;
   bottom: -20px;
@@ -149,7 +143,6 @@ body{
   border: 3px solid #111;
   border-radius: 12px;
 }
-
 
 /* Products */
 .products-section{
@@ -228,12 +221,29 @@ body{
 
 /* Footer */
 .site-footer{
-  background:#0a0a0a; border-top:1px solid #131313;
+  background:#0a0a0a;
+  border-top:1px solid #131313;
+  padding: 20px 0;
+  text-align: center;
 }
-.footer-links a{color:#cfcfcf; text-decoration:none}
-.footer-links a:hover{color:#fff}
-.footer-social a{color:#cfcfcf}
-.footer-social a:hover{color:#fff}
+.footer-links,
+.footer-social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.footer-links a,
+.footer-social a {
+  color:#cfcfcf;
+  text-decoration:none;
+  font-size: 0.9rem;
+}
+.footer-links a:hover,
+.footer-social a:hover {
+  color:#fff;
+}
 .text-secondary-2{color:#9b9b9b}
 
 /* Utilities */
@@ -243,8 +253,8 @@ body{
 }
 
 /* -----------------------
-   NEW: Preloader, BackToTop,
-   theme, reveal animations, small tweaks
+   Preloader, BackToTop,
+   theme, reveal animations
    -----------------------*/
 
 /* Preloader */
@@ -315,7 +325,7 @@ body[data-theme="light"] .btn-gold{ color:#111; }
   transform: none;
 }
 
-/* cart badge small tweak */
+/* cart badge */
 #cartCount {
   font-size: .65rem;
   padding: 4px 6px;
@@ -324,52 +334,63 @@ body[data-theme="light"] .btn-gold{ color:#111; }
 /* Newsletter message */
 #newsletterMsg { min-height: 18px; }
 
-/* small responsive tweaks */
-@media (max-width: 576px) {
-  #backToTop { bottom: 18px; right: 14px; width:42px; height:42px; }
-  .hero-overlay h1 { font-size: 1.2rem; }
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  /* Hero responsiveness */
+  .hero {
+    height: 70vh;
+  }
+  .hero-slide {
+    height: 70vh;
+  }
+  .hero-overlay h1 {
+    font-size: 1.3rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  /* Footer responsiveness */
+  .footer-links,
+  .footer-social {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 /* Documentation Section Styling */
 #docs {
-  background: linear-gradient(135deg, #000000, #1a1a1a); /* Dark background */
+  background: linear-gradient(135deg, #000000, #1a1a1a);
   padding: 80px 0;
 }
-
 #docs h2 {
-  color: #f5f5f5; /* White heading */
+  color: #f5f5f5;
   font-weight: 700;
   font-size: 2.2rem;
   text-align: center;
 }
 #docs p {
-  color: #9c9494; /* Muted grey text */
+  color: #9c9494;
   font-size: 1rem;
   line-height: 1.7;
 }
-
-/* Feature Boxes with Icons */
 #docs .d-flex {
-  background: #111; /* Dark card */
+  background: #111;
   border-radius: 12px;
   padding: 15px 20px;
   box-shadow: 0 4px 15px rgba(255,255,255,0.05);
   transition: all 0.3s ease-in-out;
 }
-
 #docs .d-flex:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(255,255,255,0.12);
 }
-
 #docs .d-flex i {
   font-size: 1.8rem;
-  color: #d4af37; /* Golden icons for luxury look */
+  color: #d4af37;
 }
-
-/* Button */
 #docs .btn-primary {
-  background: linear-gradient(135deg, #d4af37, #b8860b); /* Gold gradient */
+  background: linear-gradient(135deg, #d4af37, #b8860b);
   border: none;
   padding: 12px 28px;
   font-size: 1rem;
@@ -378,14 +399,11 @@ body[data-theme="light"] .btn-gold{ color:#111; }
   transition: 0.3s ease;
   color: #000;
 }
-
 #docs .btn-primary:hover {
   background: linear-gradient(135deg, #b8860b, #d4af37);
   transform: scale(1.05);
   color: #000;
 }
-
-/* Right Image Card */
 #docs .doc-preview {
   background: #111;
   border-radius: 16px;
@@ -393,18 +411,15 @@ body[data-theme="light"] .btn-gold{ color:#111; }
   box-shadow: 0 6px 25px rgba(47, 46, 46, 0.1);
   transition: 0.3s ease;
 }
-
 #docs .doc-preview:hover {
   transform: scale(1.03);
 }
 
-
+/* Gallery */
 #gallery img {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
-
 #gallery img:hover {
   transform: scale(1.05);
 }
-
